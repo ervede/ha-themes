@@ -1,0 +1,9 @@
+{
+  "name": "iOS Liquid Glass Theme",
+  "content_in_root": false,
+  "filename": "ios-liquid-glass.yaml",
+  "render_readme": true,
+  "domains": ["frontend"],
+  "country": "global",
+  "homeassistant": "2023.0.0"
+}

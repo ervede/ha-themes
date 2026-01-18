@@ -1,0 +1,295 @@
+iOS-Liquid-Glass:
+  modes:
+
+    ############################################################
+    # 🌞 LIGHT MODE
+    ############################################################
+    light:
+
+      # Responsive + Fixed Background
+      lovelace-background: >
+        center / cover no-repeat fixed
+        url('/local/wallpapers/liquid_glass_light.png')
+
+      # Mobile + iOS Safari fallback + ultrawide support
+      card-mod-root-yaml: |
+        html {
+          background-attachment: fixed !important;
+          background-size: cover !important;
+          background-position: center !important;
+        }
+        @media (min-aspect-ratio: 21/9) {
+          html {
+            background-size: contain !important;
+            background-color: black !important;
+          }
+        }
+        @keyframes fade-in-scale {
+          0%   { opacity: 0; transform: scale(0.92); }
+          100% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes fade-out-scale {
+          0%   { opacity: 1; transform: scale(1); }
+          100% { opacity: 0; transform: scale(0.92); }
+        }
+
+      primary-color: "#000000"
+      accent-color: "#007aff"
+      text-primary-color: "#000000"
+      text-light-primary-color: "#000000"
+      disabled-text-color: "rgba(0,0,0,0.4)"
+      divider-color: "rgba(0,0,0,0.12)"
+
+      # Cards
+      card-background-color: "rgba(255,255,255,0.18)"
+      ha-card-border-radius: "22px"
+      ha-card-box-shadow: "0 8px 32px rgba(0,0,0,0.20)"
+      ha-card-backdrop-filter: "blur(22px)"
+      ha-card-border-width: "1px"
+      ha-card-border-color: "rgba(255,255,255,0.3)"
+
+      # Icons
+      icon-color: "#000000"
+      icon-active-color: "#007aff"
+
+      # Chips
+      chip-background-color: "rgba(255,255,255,0.22)"
+      chip-border-radius: "18px"
+      chip-backdrop-filter: "blur(18px)"
+
+      # Header
+      app-header-background-color: "rgba(255,255,255,0.15)"
+      app-header-text-color: "#000000"
+      app-header-backdrop-filter: "blur(20px)"
+
+      # Dialogs
+      dialog-backdrop-filter: "blur(26px)"
+      dialog-background-color: "rgba(255,255,255,0.22)"
+      dialog-border-radius: "24px"
+
+      # Inputs
+      input-fill-color: "rgba(255,255,255,0.25)"
+      input-background-color: "rgba(255,255,255,0.25)"
+      input-border-color: "rgba(255,255,255,0.3)"
+      input-backdrop-filter: "blur(18px)"
+
+      # Switches
+      switch-checked-color: "#007aff"
+      switch-unchecked-button-color: "rgba(0,0,0,0.5)"
+      switch-unchecked-track-color: "rgba(0,0,0,0.2)"
+
+      # Scrollbars
+      scrollbar-thumb-color: "rgba(0,0,0,0.3)"
+      scrollbar-thumb-hover-color: "rgba(0,0,0,0.5)"
+
+      ############################################################
+      # Glass Sliders
+      ############################################################
+      slider-background-color: "rgba(255,255,255,0.18)"
+      slider-background-color-active: var(--accent-color)
+      slider-border-radius: "18px"
+      slider-border-width: "1px"
+      slider-border-color: "rgba(255,255,255,0.25)"
+      slider-backdrop-filter: "blur(18px)"
+      slider-box-shadow: "0 4px 18px rgba(0,0,0,0.15)"
+      slider-handle-color: var(--accent-color)
+      slider-handle-size: "18px"
+
+      ############################################################
+      # Glass Toggle Switches
+      ############################################################
+      toggle-background-color: "rgba(255,255,255,0.18)"
+      toggle-background-color-checked: var(--accent-color)
+      toggle-handle-color: "rgba(255,255,255,0.95)"
+      toggle-handle-color-checked: "#ffffff"
+      toggle-border-radius: "20px"
+      toggle-border-width: "1px"
+      toggle-border-color: "rgba(255,255,255,0.25)"
+      toggle-backdrop-filter: "blur(18px)"
+      toggle-box-shadow: "0 4px 18px rgba(0,0,0,0.15)"
+
+      ############################################################
+      # Bubble Card — Light Mode (Glass + Buttons + Accents)
+      ############################################################
+
+      bubble-border-radius: "8px"
+      bubble-main-background-color: "rgba(255,255,255,0.18)"
+      bubble-secondary-background-color: "rgba(255,255,255,0.28)"
+
+      # Pop-Up Glass
+      bubble-pop-up-main-background-color: "rgba(255,255,255,0.18)"
+      bubble-pop-up-secondary-background-color: "rgba(255,255,255,0.28)"
+      bubble-pop-up-border-radius: "22px"
+      bubble-pop-up-backdrop-filter: "blur(22px)"
+      bubble-pop-up-border-width: "1px"
+      bubble-pop-up-border-color: "rgba(255,255,255,0.25)"
+      bubble-pop-up-box-shadow: "0 8px 32px rgba(0,0,0,0.25)"
+
+      # Animated Pop-Up Transitions
+      bubble-pop-up-animation-in: "fade-in-scale 0.35s ease-out"
+      bubble-pop-up-animation-out: "fade-out-scale 0.25s ease-in"
+
+      # Glass Buttons inside Pop-Up
+      bubble-button-background-color: "rgba(255,255,255,0.18)"
+      bubble-button-background-color-active: "rgba(255,255,255,0.28)"
+      bubble-button-border-radius: "18px"
+      bubble-button-backdrop-filter: "blur(18px)"
+      bubble-button-border-width: "1px"
+      bubble-button-border-color: "rgba(255,255,255,0.25)"
+      bubble-button-box-shadow: "0 4px 18px rgba(0,0,0,0.15)"
+
+      # State-Based Accents
+      bubble-accent-color: var(--accent-color)
+      bubble-accent-color-active: var(--accent-color)
+      bubble-accent-color-inactive: var(--icon-color)
+      bubble-accent-color-unavailable: var(--disabled-text-color)
+
+      # Optional Glow
+      bubble-pop-up-accent-glow: "0 0 12px var(--accent-color)"
+
+
+    ############################################################
+    # 🌙 DARK MODE
+    ############################################################
+    dark:
+
+      # Responsive + Fixed Background
+      lovelace-background: >
+        center / cover no-repeat fixed
+        url('/local/wallpapers/liquid_glass_dark.png')
+
+      # Mobile + iOS Safari fallback + ultrawide support
+      card-mod-root-yaml: |
+        html {
+          background-attachment: fixed !important;
+          background-size: cover !important;
+          background-position: center !important;
+        }
+        @media (min-aspect-ratio: 21/9) {
+          html {
+            background-size: contain !important;
+            background-color: black !important;
+          }
+        }
+        @keyframes fade-in-scale {
+          0%   { opacity: 0; transform: scale(0.92); }
+          100% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes fade-out-scale {
+          0%   { opacity: 1; transform: scale(1); }
+          100% { opacity: 0; transform: scale(0.92); }
+        }
+
+      primary-color: "#ffffff"
+      accent-color: "#4da3ff"
+      text-primary-color: "#ffffff"
+      text-light-primary-color: "#ffffff"
+      disabled-text-color: "rgba(255,255,255,0.4)"
+      divider-color: "rgba(255,255,255,0.12)"
+
+      # Cards
+      card-background-color: "rgba(255,255,255,0.12)"
+      ha-card-border-radius: "22px"
+      ha-card-box-shadow: "0 8px 32px rgba(0,0,0,0.45)"
+      ha-card-backdrop-filter: "blur(22px)"
+      ha-card-border-width: "1px"
+      ha-card-border-color: "rgba(255,255,255,0.25)"
+
+      # Icons
+      icon-color: "#ffffff"
+      icon-active-color: "#4da3ff"
+
+      # Chips
+      chip-background-color: "rgba(255,255,255,0.18)"
+      chip-border-radius: "18px"
+      chip-backdrop-filter: "blur(18px)"
+
+      # Header
+      app-header-background-color: "rgba(0,0,0,0.25)"
+      app-header-text-color: "#ffffff"
+      app-header-backdrop-filter: "blur(20px)"
+
+      # Dialogs
+      dialog-backdrop-filter: "blur(26px)"
+      dialog-background-color: "rgba(30,30,30,0.35)"
+      dialog-border-radius: "24px"
+
+      # Inputs
+      input-fill-color: "rgba(255,255,255,0.20)"
+      input-background-color: "rgba(255,255,255,0.20)"
+      input-border-color: "rgba(255,255,255,0.25)"
+      input-backdrop-filter: "blur(18px)"
+
+      # Switches
+      switch-checked-color: "#4da3ff"
+      switch-unchecked-button-color: "rgba(255,255,255,0.5)"
+      switch-unchecked-track-color: "rgba(255,255,255,0.2)"
+
+      # Scrollbars
+      scrollbar-thumb-color: "rgba(255,255,255,0.3)"
+      scrollbar-thumb-hover-color: "rgba(255,255,255,0.5)"
+
+      ############################################################
+      # Glass Sliders
+      ############################################################
+      slider-background-color: "rgba(255,255,255,0.12)"
+      slider-background-color-active: var(--accent-color)
+      slider-border-radius: "18px"
+      slider-border-width: "1px"
+      slider-border-color: "rgba(255,255,255,0.25)"
+      slider-backdrop-filter: "blur(18px)"
+      slider-box-shadow: "0 4px 18px rgba(0,0,0,0.25)"
+      slider-handle-color: var(--accent-color)
+      slider-handle-size: "18px"
+
+      ############################################################
+      # Glass Toggle Switches
+      ############################################################
+      toggle-background-color: "rgba(255,255,255,0.12)"
+      toggle-background-color-checked: var(--accent-color)
+      toggle-handle-color: "rgba(255,255,255,0.95)"
+      toggle-handle-color-checked: "#ffffff"
+      toggle-border-radius: "20px"
+      toggle-border-width: "1px"
+      toggle-border-color: "rgba(255,255,255,0.25)"
+      toggle-backdrop-filter: "blur(18px)"
+      toggle-box-shadow: "0 4px 18px rgba(0,0,0,0.25)"
+
+      ############################################################
+      # Bubble Card — Dark Mode (Glass + Buttons + Accents)
+      ############################################################
+
+      bubble-border-radius: "8px"
+      bubble-main-background-color: "rgba(255,255,255,0.12)"
+      bubble-secondary-background-color: "rgba(255,255,255,0.22)"
+
+      # Pop-Up Glass
+      bubble-pop-up-main-background-color: "rgba(30,30,30,0.35)"
+      bubble-pop-up-secondary-background-color: "rgba(255,255,255,0.12)"
+      bubble-pop-up-border-radius: "22px"
+      bubble-pop-up-backdrop-filter: "blur(22px)"
+      bubble-pop-up-border-width: "1px"
+      bubble-pop-up-border-color: "rgba(255,255,255,0.25)"
+      bubble-pop-up-box-shadow: "0 8px 32px rgba(0,0,0,0.45)"
+
+      # Animated Pop-Up Transitions
+      bubble-pop-up-animation-in: "fade-in-scale 0.35s ease-out"
+      bubble-pop-up-animation-out: "fade-out-scale 0.25s ease-in"
+
+      # Glass Buttons inside Pop-Up
+      bubble-button-background-color: "rgba(255,255,255,0.12)"
+      bubble-button-background-color-active: "rgba(255,255,255,0.22)"
+      bubble-button-border-radius: "18px"
+      bubble-button-backdrop-filter: "blur(18px)"
+      bubble-button-border-width: "1px"
+      bubble-button-border-color: "rgba(255,255,255,0.25)"
+      bubble-button-box-shadow: "0 4px 18px rgba(0,0,0,0.25)"
+
+      # State-Based Accents
+      bubble-accent-color: var(--accent-color)
+      bubble-accent-color-active: var(--accent-color)
+      bubble-accent-color-inactive: var(--icon-color)
+      bubble-accent-color-unavailable: var(--disabled-text-color)
+
+      # Optional Glow
+      bubble-pop-up-accent-glow: "0 0 12px var(--accent-color)"
