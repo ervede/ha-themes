@@ -6,12 +6,12 @@ iOS-Liquid-Glass:
     ############################################################
     light:
 
-      # Responsive + Fixed Background
+      # Responsive + Fixed Background (HACS path)
       lovelace-background: >
         center / cover no-repeat fixed
-        url('/local/wallpapers/liquid_glass_light.png')
+        url('/local/ios-liquid-glass/wallpapers/liquid_glass_light.png')
 
-      # Mobile + iOS Safari fallback + ultrawide support
+      # Mobile + iOS Safari fallback + ultrawide support + animations
       card-mod-root-yaml: |
         html {
           background-attachment: fixed !important;
@@ -153,12 +153,12 @@ iOS-Liquid-Glass:
     ############################################################
     dark:
 
-      # Responsive + Fixed Background
+      # Responsive + Fixed Background (HACS path)
       lovelace-background: >
         center / cover no-repeat fixed
-        url('/local/wallpapers/liquid_glass_dark.png')
+        url('/local/ios-liquid-glass/wallpapers/liquid_glass_dark.png')
 
-      # Mobile + iOS Safari fallback + ultrawide support
+      # Mobile + iOS Safari fallback + ultrawide support + animations
       card-mod-root-yaml: |
         html {
           background-attachment: fixed !important;
